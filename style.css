@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*colors*/
+  --white: #ffffff;
+  --cream: #f2eae2;
+  --neutral: #6c7289;
+  --accent: #3d8168;
+  --hover: #1a4032;
+  --muted: #1c232b;
+
+  /*fonts*/
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+main {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: var(--white);
+  font-family: var(--font-body);
+  margin: 20px;
+  overflow: hidden;
+}
+
+main > * {
+  flex-basis: 50%;
+}
+
+picture {
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  padding: 20px;
+}
+
+.item-type {
+  font-size: 12px;
+  color: var(--neutral);
+  line-height: 15px;
+  letter-spacing: 5px;
+}
+
+.item-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, calc(1.4rem + 1.43vw), 1.9rem);
+  line-height: 32px;
+  color: var(--muted);
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.item-description {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--neutral);
+  margin-bottom: 24px;
+}
+
+.item-price {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--accent);
+}
+
+.price {
+  text-decoration: line-through;
+  color: var(--neutral);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: var(--white);
+  padding: 14px 32px;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--accent);
+  cursor: pointer;
+  font: inherit;
+  border: none;
+}
+
+button img {
+  width: 16px;
+}
+
+button:hover {
+  background: var(--hover);
+}
+
+/* media query */
+@media (min-width: 611px) {
+  main {
+    flex-direction: row;
+  }
+
+  .container {
+    padding: 32px;
+  }
+
+  .item-heading {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  .item-description {
+    margin-bottom: 24px;
+  }
+}
